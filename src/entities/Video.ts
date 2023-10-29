@@ -6,10 +6,10 @@ export class Video{
     @PrimaryGeneratedColumn()
     id: number
 
-    @Column()
+    @Column({type:'text'})
     title: string
 
-    @Column()
+    @Column({type: 'text'})
     url: string
 
     @ManyToOne(() => Room, room => room.videos)
