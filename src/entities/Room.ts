@@ -1,10 +1,14 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Video } from "./Video";
 
 @Entity('room')
 export class Room{
     @PrimaryGeneratedColumn()
     id: number
-    
+
     @Column({type: 'text'})
     name: string
+
+    @OneToMany(() => Video, video => video.room)
+    videos: Video[]
 }
