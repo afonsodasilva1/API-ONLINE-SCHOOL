@@ -8,7 +8,7 @@ AppDataSource.initialize().then(() => {
     app.use(express.json())
 
     app.get('/', (request: Request, response: Response) =>{
-        response.json({message: 'Olá Mundo'})
+        response.json({message: 'Olá, Mundo'})
     })
 
     return app.listen(process.env.PORT)
