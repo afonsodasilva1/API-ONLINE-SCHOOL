@@ -10,7 +10,7 @@ export class Room{
     name: string
 
     @Column({type: 'text', nullable: true})
-    descption: string
+    description: string
 
     @OneToMany(() => Video, video => video.room)
     videos: Video[]
